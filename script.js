@@ -87,7 +87,7 @@ function sendReminderEmail(medicineName, userEmail) {
         ]
     };
 
-    fetch('https://api.sendgrid.com/v3/mail/send', {
+  /*  fetch('https://api.sendgrid.com/v3/mail/send', {
         method: 'POST',
         headers: {
             Authorization: `Bearer ${sendGridApiKey}`,
@@ -111,4 +111,36 @@ function sendReminderEmail(medicineName, userEmail) {
 setInterval(updateCurrentTime, 1000);
 
 // Update the current time immediately on page load
-updateCurrentTime();
+updateCurrentTime();*/
+fetch('https://api.sendgrid.com/v3/mail/send', {
+    method: 'POST',
+    headers: {
+        'Authorization': 'Bearer YOUR_SENDGRID_API_KEY',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        personalizations: [
+            {
+                to: [{ email: 'recipient@example.com' }],
+                subject: 'Test Email'
+            }
+        ],
+        from: { email: 'sender@example.com' },
+        content: [
+            {
+                type: 'text/plain',
+                value: 'This is a test email.'
+            }
+        ]
+    })
+})
+.then(response => {
+    if (response.ok) {
+        console.log('Email sent successfully!');
+    } else {
+        console.error('Failed to send email:', response.statusText);
+    }
+})
+.catch(error => {
+    console.error('Error sending email:', error);
+});
