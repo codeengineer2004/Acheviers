@@ -2,6 +2,16 @@
   margin:0;
   padding:0;
 }
+.notes p {
+    color: black; /* Set the color to black */
+    font-size: 16px; /* Adjust the font size as needed */
+    font-weight: normal; /* Set the font weight to normal */
+    font-style: normal; /* Set the font style to normal */
+    text-decoration: none; /* Remove any text decoration */
+}
+.notes a {
+    text-decoration: none; /* Remove underline from the link */
+}
 body {
     background: linear-gradient(midnightBlue,white);
     background-repeat: no-repeat;
@@ -652,7 +662,7 @@ h1{
 
 
 }
-@media screen and (min-width: 500px) and (max-width: 900px) {
+@media screen and (min-width: 0px) and (max-width: 900px) {
 
   .text-box h1{
     font-size: 40px;
@@ -732,96 +742,7 @@ h1{
   }
 
 }
-@media screen and (min-width: 0px) and (max-width: 500px) {
-  .notes {
-      border-radius: 25px;
-      border: 2px solid green;
-      width: 4cm;
-      max-width: calc(300px + 10vw); /* Adjusted max-width */
-      height: auto; /* Adjusted height */
-      margin: 20px auto; /* Center horizontally with margin */
-      background-color: red;
 
-  }
-
-  .text-box h1{
-    font-size: 40px;
-
-  }
-
-  .container{
-    display: flex;
-    justify-content: space-between;
-
-  }
-  .text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 6cm;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-  }
-  .text-box p{
-    margin: 10px 0 40px;
-    font-size: 16px;
-    color: #fff;
-  }
-  .prepare{
-    top:70%;
-    margin: auto;
-
-    justify-content: center;
-    width: 5cm;
-    height: 20cm;
-
-
-    margin-top: 9cm;
-    background-color: white;
-    font color: black;
-
-  }
-
-  .navbar{
-    position: absolute;
-    background:#0E3386;
-    height: 100vh;
-    width: 200px;
-    top:0;
-    right: -200px ;
-    text-align: left;
-    z-index: 2;
-    transition: 1s;
-
-
-
-  }
-  #logo{
-
-  }
-  nav .fa{
-
-    display: block;
-    color: black;
-    margin: 10px;
-    font-size: 22px;
-
-
-
-    cursor: pointer;
-
-  }
-  .navbar ul{
-    padding: 30px;
-  }
-
-  .navbar ul li{
-    display: block;
-
-  }
-
-}
 /*.container{
   display: flex;
   justify-content: space-between;
@@ -877,8 +798,5 @@ h1{
 .fl{
   size:100px;
 
-
-}
-.preparewithus{
 
 }
